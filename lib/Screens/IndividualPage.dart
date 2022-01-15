@@ -43,7 +43,7 @@ class _IndividualPageState extends State<IndividualPage> {
 
   void connect() {
     // MessageModel messageModel = MessageModel(sourceId: widget.sourceChat.id.toString(),targetId: );
-    socket = IO.io("http://192.168.0.106:5000", <String, dynamic>{
+    socket = IO.io("http://amanmaurya-57093.portmap.host:57093", <String, dynamic>{
       "transports": ["websocket"],
       "autoConnect": false,
     });
@@ -58,6 +58,7 @@ class _IndividualPageState extends State<IndividualPage> {
             duration: Duration(milliseconds: 300), curve: Curves.easeOut);
       });
     });
+    print('sockets------');
     print(socket.connected);
   }
 

@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   ChatModel sourceChat;
   List<ChatModel> chatmodels = [
     ChatModel(
-      name: "Dev Stack",
+      name: "AMAn Stack",
       isGroup: false,
       currentMessage: "Hi Everyone",
       time: "4:00",
@@ -22,39 +22,39 @@ class _LoginScreenState extends State<LoginScreen> {
       id: 1,
     ),
     ChatModel(
-      name: "Kishor",
+      name: "Ammy",
       isGroup: false,
-      currentMessage: "Hi Kishor",
+      currentMessage: "Hi Ammy",
       time: "13:00",
       icon: "person.svg",
       id: 2,
     ),
 
     ChatModel(
-      name: "Collins",
+      name: "Depanshu",
       isGroup: false,
-      currentMessage: "Hi Dev Stack",
+      currentMessage: "Hi  Depanshu",
       time: "8:00",
       icon: "person.svg",
       id: 3,
     ),
 
     ChatModel(
-      name: "Balram Rathore",
+      name: "Kanchan",
       isGroup: false,
-      currentMessage: "Hi Dev Stack",
+      currentMessage: "Hi  Kanchan",
       time: "2:00",
       icon: "person.svg",
       id: 4,
     ),
 
-    // ChatModel(
-    //   name: "NodeJs Group",
-    //   isGroup: true,
-    //   currentMessage: "New NodejS Post",
-    //   time: "2:00",
-    //   icon: "group.svg",
-    // ),
+    ChatModel(
+      name: "NodeJs Group",
+      isGroup: true,
+      currentMessage: "New NodejS Post",
+      time: "2:00",
+      icon: "group.svg",
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,10 @@ class _LoginScreenState extends State<LoginScreen> {
           itemCount: chatmodels.length,
           itemBuilder: (contex, index) => InkWell(
                 onTap: () {
+                  print(index);
+
                   sourceChat = chatmodels.removeAt(index);
+                  print(sourceChat.id);
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
