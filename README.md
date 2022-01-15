@@ -8,7 +8,7 @@
 2. After cloning install packages using below syntax -:
    > flutter pub get
 
-Above command will install all the neccery packges.
+Above command will install all the necessary packages.
 
 3. Run the app on your mobile using below command -:
    > flutter run

@@ -83,7 +83,7 @@ class _OtpScreenState extends State<OtpScreen> {
               fieldStyle: FieldStyle.underline,
                 onChanged: (String pin) {
                   if (pin.length == 4) {
-                    print("onChanged: " + pin);
+                    print("Completed: " + pin);
                   }
                 },
 
